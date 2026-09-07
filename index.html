@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#111827" />
+<title>30-Day Fitness Transformation</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">30-DAY TRANSFORMATION</div>
+    <h1>Fitness & Nutrition Tracker</h1>
+    <p>Progressive fat loss • Strength training • High-protein vegetarian meals</p>
+    <div class="stats">
+      <div><strong>2,200</strong><span>Target kcal/day</span></div>
+      <div><strong>130–140g</strong><span>Protein/day</span></div>
+      <div><strong>8–10k</strong><span>Steps/day</span></div>
+      <div><strong>4</strong><span>Gym days/week</span></div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <nav class="tabs" aria-label="Sections">
+    <button class="tab active" data-tab="workout">Workout Tracker</button>
+    <button class="tab" data-tab="meals">Meal Options</button>
+    <button class="tab" data-tab="progress">Progress</button>
+    <button class="tab" data-tab="guide">How to Use</button>
+  </nav>
+
+  <section id="workout" class="panel active">
+    <div class="panel-head">
+      <div><h2>30-Day Workout Checklist</h2><p>Tick an exercise when completed. Your data is stored in this browser.</p></div>
+      <div class="actions"><button id="resetWorkout" class="btn secondary">Reset checks</button></div>
+    </div>
+    <div class="progressbar"><div id="workoutBar"></div></div>
+    <div class="small" id="workoutProgressText">0 exercises completed</div>
+    <div id="workoutGrid" class="workout-grid"></div>
+  </section>
+
+  <section id="meals" class="panel">
+    <div class="panel-head"><div><h2>2,200-Calorie Vegetarian Meal Options</h2><p>Mix and match options while keeping the full day close to your calorie and protein targets.</p></div></div>
+    <div id="mealGrid" class="meal-grid"></div>
+    <div class="note"><strong>Simple rule:</strong> Build every major meal around a protein source such as tofu, soy chunks, low-fat paneer, Greek/hung curd, dal or legumes.</div>
+  </section>
+
+  <section id="progress" class="panel">
+    <div class="panel-head"><div><h2>Progress Tracker</h2><p>Track the trend, not one day's scale reading.</p></div><button id="clearProgress" class="btn secondary">Clear progress</button></div>
+    <div class="progress-form">
+      <label>Date<input id="pDate" type="date"></label>
+      <label>Weight (kg)<input id="pWeight" type="number" step="0.1"></label>
+      <label>Waist (cm)<input id="pWaist" type="number" step="0.1"></label>
+      <label>Steps<input id="pSteps" type="number"></label>
+      <label>Calories<input id="pCalories" type="number"></label>
+      <label>Protein (g)<input id="pProtein" type="number"></label>
+      <button id="addProgress" class="btn">Add entry</button>
+    </div>
+    <div class="cards" id="progressCards"></div>
+    <div class="table-wrap"><table><thead><tr><th>Date</th><th>Weight</th><th>Waist</th><th>Steps</th><th>Calories</th><th>Protein</th></tr></thead><tbody id="progressRows"></tbody></table></div>
+  </section>
+
+  <section id="guide" class="panel">
+    <h2>Training Rules</h2>
+    <div class="guide-grid">
+      <div class="guide-card"><h3>Warm up</h3><p>5–8 minutes of treadmill or cycle, then 1–2 light warm-up sets before your first major lift.</p></div>
+      <div class="guide-card"><h3>Progressive overload</h3><p>When you reach the top of the rep range on every set with clean form, increase the load slightly next time.</p></div>
+      <div class="guide-card"><h3>Effort</h3><p>For the first month, finish most working sets with roughly 2–3 good reps still available.</p></div>
+      <div class="guide-card"><h3>Recovery</h3><p>Sleep 7–9 hours, walk daily, and keep at least one complete rest day each week.</p></div>
+      <div class="guide-card"><h3>Fat-loss checkpoint</h3><p>Use your 7-day average weight. Only adjust calories after 2–3 weeks of consistent tracking.</p></div>
+      <div class="guide-card"><h3>Safety</h3><p>Stop and seek medical advice for chest pain, fainting, unusual breathlessness or other concerning symptoms.</p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">30-Day Fitness Transformation • Your data stays on this device.</div></footer>
+<script src="app.js"></script>
+</body>
+</html>
